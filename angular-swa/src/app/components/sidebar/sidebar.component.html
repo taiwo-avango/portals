@@ -1,0 +1,34 @@
+<div class="page-wrapper" dir="ltr">
+  <xds-sidebar side="left" side-width="200px" max-width="" content-min="50%" space="1rem" flexible-width="">
+    <xds-sidenav slot="sidebar" open="true" navigation-width="200px">
+      <xds-sidenav-item>
+        <a href="/">
+          <xds-sidenav-item-content icon="library" label="Overview"></xds-sidenav-item-content>
+        </a>
+      </xds-sidenav-item>
+      <xds-sidenav-item>
+        <a href="/forms">
+          <xds-sidenav-item-content icon="edit" label="Forms"></xds-sidenav-item-content>
+        </a>
+      </xds-sidenav-item>
+      <xds-sidenav-item>
+        <a href="/data">
+          <xds-sidenav-item-content icon="table" label="Data"></xds-sidenav-item-content>
+        </a>
+      </xds-sidenav-item>
+      <xds-sidenav-item>
+        <a href="/layouts">
+          <xds-sidenav-item-content icon="environment" label="Layouts"></xds-sidenav-item-content>
+        </a>
+      </xds-sidenav-item>
+      <xds-sidenav-item>
+        <a href="/notifications">
+          <xds-sidenav-item-content icon="bell" label="Notifications"></xds-sidenav-item-content>
+        </a>
+      </xds-sidenav-item>
+    </xds-sidenav>
+    <div class="content-area">
+      <ng-content></ng-content>
+    </div>
+  </xds-sidebar>
+</div>

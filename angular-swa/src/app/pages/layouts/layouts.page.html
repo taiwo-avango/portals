@@ -1,0 +1,185 @@
+<app-sidebar>
+<div class="page-container">
+  <h2>Layout Components</h2>
+  <p class="page-description">Cards, panels, and container components for structuring your application interface.</p>
+
+  <!-- Basic Cards -->
+  <section class="component-section">
+    <h3>Basic Cards</h3>
+    <div class="card-grid">
+      <xds-card>
+        <div slot="header">Simple Card</div>
+        <div slot="content">
+          <p>This is a basic card with a header and content area. Perfect for displaying contained information.</p>
+        </div>
+      </xds-card>
+      <xds-card>
+        <div slot="header">Card with Actions</div>
+        <div slot="content">
+          <p>Cards can contain various content types including text, images, and action buttons.</p>
+          <div class="card-actions">
+            <xds-button variant="primary">Action</xds-button>
+            <xds-button variant="secondary">Cancel</xds-button>
+          </div>
+        </div>
+      </xds-card>
+      <xds-card>
+        <div slot="header">Status Card</div>
+        <div slot="content">
+          <p>Display status information with badges and indicators.</p>
+          <div class="status-row">
+            <span>Status:</span>
+            <xds-badge variant="success">Operational</xds-badge>
+          </div>
+        </div>
+      </xds-card>
+    </div>
+  </section>
+
+  <!-- Feature Cards -->
+  <section class="component-section">
+    <h3>Feature Showcase</h3>
+    <div class="feature-grid">
+      <xds-card>
+        <div slot="header">⚡ Performance</div>
+        <div slot="content">
+          <p>Optimized for speed and efficiency with minimal overhead.</p>
+          <ul class="feature-list">
+            <li>Fast rendering</li>
+            <li>Lazy loading</li>
+            <li>Efficient updates</li>
+          </ul>
+        </div>
+      </xds-card>
+      <xds-card>
+        <div slot="header">🎨 Customizable</div>
+        <div slot="content">
+          <p>Flexible theming and styling options to match your brand.</p>
+          <ul class="feature-list">
+            <li>CSS variables</li>
+            <li>Custom themes</li>
+            <li>Responsive design</li>
+          </ul>
+        </div>
+      </xds-card>
+      <xds-card>
+        <div slot="header">🔒 Secure</div>
+        <div slot="content">
+          <p>Built with security best practices in mind.</p>
+          <ul class="feature-list">
+            <li>XSS protection</li>
+            <li>CSRF tokens</li>
+            <li>Secure defaults</li>
+          </ul>
+        </div>
+      </xds-card>
+      <xds-card>
+        <div slot="header">♿ Accessible</div>
+        <div slot="content">
+          <p>WCAG compliant components for inclusive design.</p>
+          <ul class="feature-list">
+            <li>ARIA labels</li>
+            <li>Keyboard navigation</li>
+            <li>Screen reader support</li>
+          </ul>
+        </div>
+      </xds-card>
+    </div>
+  </section>
+
+  <!-- Tabbed Content -->
+  <section class="component-section">
+    <h3>Tabbed Layouts</h3>
+    <xds-tabs>
+      <xds-tab slot="tab" label="Dashboard" active>
+        <div class="tab-content">
+          <h4>Dashboard View</h4>
+          <p>This tab contains the main dashboard interface with key metrics and overview information.</p>
+          <div class="dashboard-preview">
+            <xds-card>
+              <div slot="content">
+                <div class="metric">
+                  <span class="metric-label">Total Users</span>
+                  <span class="metric-value">2,847</span>
+                </div>
+              </div>
+            </xds-card>
+            <xds-card>
+              <div slot="content">
+                <div class="metric">
+                  <span class="metric-label">Active Sessions</span>
+                  <span class="metric-value">412</span>
+                </div>
+              </div>
+            </xds-card>
+          </div>
+        </div>
+      </xds-tab>
+      <xds-tab slot="tab" label="Analytics">
+        <div class="tab-content">
+          <h4>Analytics View</h4>
+          <p>Detailed analytics and reporting data would be displayed here.</p>
+          <xds-alert type="info" icon="info">
+            Analytics data is updated every hour.
+          </xds-alert>
+        </div>
+      </xds-tab>
+      <xds-tab slot="tab" label="Reports">
+        <div class="tab-content">
+          <h4>Reports View</h4>
+          <p>Generate and view various reports for your organization.</p>
+          <div class="report-options">
+            <xds-button variant="primary">Generate Report</xds-button>
+            <xds-button variant="secondary">Export Data</xds-button>
+          </div>
+        </div>
+      </xds-tab>
+      <xds-tab slot="tab" label="Settings">
+        <div class="tab-content">
+          <h4>Settings View</h4>
+          <p>Configure application settings and preferences.</p>
+          <xds-checkbox label="Enable notifications"></xds-checkbox>
+          <xds-checkbox label="Auto-save changes"></xds-checkbox>
+        </div>
+      </xds-tab>
+    </xds-tabs>
+  </section>
+
+  <!-- Grid Layouts -->
+  <section class="component-section">
+    <h3>Grid Layouts</h3>
+    <div class="grid-example">
+      <div class="grid-item">
+        <xds-card>
+          <div slot="content">Grid Item 1</div>
+        </xds-card>
+      </div>
+      <div class="grid-item">
+        <xds-card>
+          <div slot="content">Grid Item 2</div>
+        </xds-card>
+      </div>
+      <div class="grid-item">
+        <xds-card>
+          <div slot="content">Grid Item 3</div>
+        </xds-card>
+      </div>
+      <div class="grid-item">
+        <xds-card>
+          <div slot="content">Grid Item 4</div>
+        </xds-card>
+      </div>
+      <div class="grid-item">
+        <xds-card>
+          <div slot="content">Grid Item 5</div>
+        </xds-card>
+      </div>
+      <div class="grid-item">
+        <xds-card>
+          <div slot="content">Grid Item 6</div>
+        </xds-card>
+      </div>
+    </div>
+  </section>
+</div>
+</app-sidebar>

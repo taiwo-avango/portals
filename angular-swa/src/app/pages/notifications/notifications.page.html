@@ -1,0 +1,192 @@
+<app-sidebar>
+<div class="page-container">
+  <h2>Notifications & Feedback</h2>
+  <p class="page-description">Alerts, badges, and feedback components to communicate with users effectively.</p>
+
+  <!-- Alert Types -->
+  <section class="component-section">
+    <h3>Alert Messages</h3>
+    <div class="alerts-container">
+      <xds-alert type="info" icon="info">
+        <strong>Information:</strong> Your profile has been updated successfully. Changes will take effect immediately.
+      </xds-alert>
+      <xds-alert type="success" icon="check">
+        <strong>Success:</strong> Your payment has been processed. Receipt has been sent to your email.
+      </xds-alert>
+      <xds-alert type="warning" icon="warning">
+        <strong>Warning:</strong> Your subscription will expire in 7 days. Please renew to avoid service interruption.
+      </xds-alert>
+      <xds-alert type="error" icon="error">
+        <strong>Error:</strong> Unable to connect to the server. Please check your internet connection and try again.
+      </xds-alert>
+    </div>
+  </section>
+
+  <!-- Inline Alerts -->
+  <section class="component-section">
+    <h3>Inline Notifications</h3>
+    <div class="alerts-container">
+      <xds-alert type="info" icon="info">
+        New features are now available in your dashboard.
+      </xds-alert>
+      <xds-alert type="success" icon="check">
+        File uploaded successfully.
+      </xds-alert>
+      <xds-alert type="warning" icon="warning">
+        Unsaved changes detected.
+      </xds-alert>
+    </div>
+  </section>
+
+  <!-- Badges -->
+  <section class="component-section">
+    <h3>Status Badges</h3>
+    <div class="badge-showcase">
+      <div class="badge-row">
+        <span class="label">Order Status:</span>
+        <xds-badge variant="success">Delivered</xds-badge>
+        <xds-badge variant="warning">Pending</xds-badge>
+        <xds-badge variant="error">Cancelled</xds-badge>
+        <xds-badge variant="info">Processing</xds-badge>
+        <xds-badge variant="default">Draft</xds-badge>
+      </div>
+      <div class="badge-row">
+        <span class="label">Priority Levels:</span>
+        <xds-badge variant="error">Critical</xds-badge>
+        <xds-badge variant="warning">High</xds-badge>
+        <xds-badge variant="info">Medium</xds-badge>
+        <xds-badge variant="success">Low</xds-badge>
+      </div>
+      <div class="badge-row">
+        <span class="label">User Roles:</span>
+        <xds-badge variant="default">Admin</xds-badge>
+        <xds-badge variant="info">Editor</xds-badge>
+        <xds-badge variant="success">Viewer</xds-badge>
+        <xds-badge variant="warning">Guest</xds-badge>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notification Cards -->
+  <section class="component-section">
+    <h3>Notification Center</h3>
+    <div class="notification-list">
+      <xds-card>
+        <div slot="content">
+          <div class="notification-item">
+            <div class="notification-icon success">✓</div>
+            <div class="notification-content">
+              <h4>Deployment Successful</h4>
+              <p>Your application has been deployed to production successfully.</p>
+              <span class="notification-time">2 minutes ago</span>
+            </div>
+            <xds-badge variant="success">New</xds-badge>
+          </div>
+        </div>
+      </xds-card>
+
+      <xds-card>
+        <div slot="content">
+          <div class="notification-item">
+            <div class="notification-icon warning">⚠</div>
+            <div class="notification-content">
+              <h4>Security Alert</h4>
+              <p>Unusual login activity detected from a new location.</p>
+              <span class="notification-time">1 hour ago</span>
+            </div>
+            <xds-badge variant="warning">Action Required</xds-badge>
+          </div>
+        </div>
+      </xds-card>
+
+      <xds-card>
+        <div slot="content">
+          <div class="notification-item">
+            <div class="notification-icon info">ℹ</div>
+            <div class="notification-content">
+              <h4>System Maintenance</h4>
+              <p>Scheduled maintenance will occur on Sunday at 2:00 AM UTC.</p>
+              <span class="notification-time">3 hours ago</span>
+            </div>
+            <xds-badge variant="info">Scheduled</xds-badge>
+          </div>
+        </div>
+      </xds-card>
+
+      <xds-card>
+        <div slot="content">
+          <div class="notification-item">
+            <div class="notification-icon success">✓</div>
+            <div class="notification-content">
+              <h4>Backup Completed</h4>
+              <p>Daily backup has been completed successfully.</p>
+              <span class="notification-time">Yesterday</span>
+            </div>
+          </div>
+        </div>
+      </xds-card>
+    </div>
+  </section>
+
+  <!-- Progress Notifications -->
+  <section class="component-section">
+    <h3>Progress Indicators</h3>
+    <div class="progress-notifications">
+      <xds-card>
+        <div slot="content">
+          <h4>File Upload Progress</h4>
+          <div class="progress-info">
+            <span>document.pdf</span>
+            <span>75%</span>
+          </div>
+          <xds-progress-bar value="75" max="100"></xds-progress-bar>
+          <xds-alert type="info" icon="info">
+            Upload in progress...
+          </xds-alert>
+        </div>
+      </xds-card>
+
+      <xds-card>
+        <div slot="content">
+          <h4>Database Migration</h4>
+          <div class="progress-info">
+            <span>Migrating records</span>
+            <span>1,250 / 5,000</span>
+          </div>
+          <xds-progress-bar value="25" max="100"></xds-progress-bar>
+          <xds-alert type="warning" icon="warning">
+            Please do not close this window.
+          </xds-alert>
+        </div>
+      </xds-card>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="component-section">
+    <h3>Action Prompts</h3>
+    <xds-card>
+      <div slot="content">
+        <div class="action-prompt">
+          <div>
+            <h4>Complete Your Profile</h4>
+            <p>Add more information to help others learn about you.</p>
+          </div>
+          <xds-button variant="primary">Complete Profile</xds-button>
+        </div>
+      </div>
+    </xds-card>
+    <xds-card>
+      <div slot="content">
+        <div class="action-prompt">
+          <div>
+            <h4>Enable Two-Factor Authentication</h4>
+            <p>Protect your account with an additional layer of security.</p>
+          </div>
+          <xds-button variant="primary">Enable 2FA</xds-button>
+        </div>
+      </div>
+    </xds-card>
+  </section>
+</div>
+</app-sidebar>

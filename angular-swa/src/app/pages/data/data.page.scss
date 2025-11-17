@@ -1,0 +1,79 @@
+.page-container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+  }
+
+  .page-description {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+}
+
+.component-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  h3 {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 1rem 0;
+  }
+}
+
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.progress-item {
+  .progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+  }
+}
+
+xds-table {
+  width: 100%;
+  
+  table {
+    width: 100%;
+    
+    th {
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    td, th {
+      padding: 0.75rem;
+    }
+  }
+}

@@ -1,0 +1,190 @@
+<app-sidebar>
+<div class="page-container">
+  <h2>Data Display Components</h2>
+  <p class="page-description">Tables, lists, and data visualization components for displaying structured information.</p>
+
+  <!-- Basic Table -->
+  <section class="component-section">
+    <h3>Employee Directory</h3>
+    <xds-table>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Department</th>
+            <th>Location</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>Alice Johnson</td>
+            <td>Senior Developer</td>
+            <td>Engineering</td>
+            <td>New York</td>
+            <td><xds-badge variant="success">Active</xds-badge></td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Bob Smith</td>
+            <td>Product Manager</td>
+            <td>Product</td>
+            <td>San Francisco</td>
+            <td><xds-badge variant="success">Active</xds-badge></td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>Carol White</td>
+            <td>UX Designer</td>
+            <td>Design</td>
+            <td>London</td>
+            <td><xds-badge variant="warning">On Leave</xds-badge></td>
+          </tr>
+          <tr>
+            <td>004</td>
+            <td>David Brown</td>
+            <td>DevOps Engineer</td>
+            <td>Engineering</td>
+            <td>Berlin</td>
+            <td><xds-badge variant="success">Active</xds-badge></td>
+          </tr>
+          <tr>
+            <td>005</td>
+            <td>Emma Davis</td>
+            <td>Sales Director</td>
+            <td>Sales</td>
+            <td>Tokyo</td>
+            <td><xds-badge variant="error">Offline</xds-badge></td>
+          </tr>
+        </tbody>
+      </table>
+    </xds-table>
+  </section>
+
+  <!-- Data Cards -->
+  <section class="component-section">
+    <h3>Project Statistics</h3>
+    <div class="stats-grid">
+      <xds-card>
+        <div slot="header">Total Projects</div>
+        <div slot="content">
+          <div class="stat-number">24</div>
+          <xds-badge variant="success">+12% this month</xds-badge>
+        </div>
+      </xds-card>
+      <xds-card>
+        <div slot="header">Active Users</div>
+        <div slot="content">
+          <div class="stat-number">1,248</div>
+          <xds-badge variant="info">+5% this week</xds-badge>
+        </div>
+      </xds-card>
+      <xds-card>
+        <div slot="header">Completion Rate</div>
+        <div slot="content">
+          <div class="stat-number">87%</div>
+          <xds-badge variant="warning">-2% this month</xds-badge>
+        </div>
+      </xds-card>
+      <xds-card>
+        <div slot="header">Revenue</div>
+        <div slot="content">
+          <div class="stat-number">$52,400</div>
+          <xds-badge variant="success">+18% this quarter</xds-badge>
+        </div>
+      </xds-card>
+    </div>
+  </section>
+
+  <!-- Progress Tracking -->
+  <section class="component-section">
+    <h3>Project Progress</h3>
+    <div class="progress-list">
+      <div class="progress-item">
+        <div class="progress-header">
+          <span>Website Redesign</span>
+          <span>85%</span>
+        </div>
+        <xds-progress-bar value="85" max="100"></xds-progress-bar>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header">
+          <span>Mobile App Development</span>
+          <span>62%</span>
+        </div>
+        <xds-progress-bar value="62" max="100"></xds-progress-bar>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header">
+          <span>API Integration</span>
+          <span>45%</span>
+        </div>
+        <xds-progress-bar value="45" max="100"></xds-progress-bar>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header">
+          <span>Testing & QA</span>
+          <span>30%</span>
+        </div>
+        <xds-progress-bar value="30" max="100"></xds-progress-bar>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Table -->
+  <section class="component-section">
+    <h3>Recent Transactions</h3>
+    <xds-table>
+      <table>
+        <thead>
+          <tr>
+            <th>Transaction ID</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#TXN-1001</td>
+            <td>2025-11-17</td>
+            <td>Software License Renewal</td>
+            <td>$1,200.00</td>
+            <td>Expense</td>
+            <td><xds-badge variant="success">Completed</xds-badge></td>
+          </tr>
+          <tr>
+            <td>#TXN-1002</td>
+            <td>2025-11-16</td>
+            <td>Client Payment - Project Alpha</td>
+            <td>$5,500.00</td>
+            <td>Income</td>
+            <td><xds-badge variant="success">Completed</xds-badge></td>
+          </tr>
+          <tr>
+            <td>#TXN-1003</td>
+            <td>2025-11-15</td>
+            <td>Office Supplies</td>
+            <td>$350.00</td>
+            <td>Expense</td>
+            <td><xds-badge variant="warning">Pending</xds-badge></td>
+          </tr>
+          <tr>
+            <td>#TXN-1004</td>
+            <td>2025-11-14</td>
+            <td>Consulting Services</td>
+            <td>$3,000.00</td>
+            <td>Income</td>
+            <td><xds-badge variant="success">Completed</xds-badge></td>
+          </tr>
+        </tbody>
+      </table>
+    </xds-table>
+  </section>
+</div>
+</app-sidebar>

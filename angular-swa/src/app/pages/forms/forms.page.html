@@ -1,0 +1,89 @@
+<app-sidebar>
+<div class="page-container">
+  <h2>Forms & Input Components</h2>
+  <p class="page-description">Comprehensive showcase of form elements and input components from the XDS library.</p>
+
+  <!-- Text Inputs -->
+  <section class="component-section">
+    <h3>Text Inputs</h3>
+    <div class="form-row">
+      <xds-input label="First Name" placeholder="Enter first name" required></xds-input>
+      <xds-input label="Last Name" placeholder="Enter last name" required></xds-input>
+    </div>
+    <div class="form-row">
+      <xds-input label="Email Address" type="email" placeholder="user@example.com"></xds-input>
+      <xds-input label="Phone Number" type="tel" placeholder="+1 (555) 123-4567"></xds-input>
+    </div>
+    <xds-input label="Disabled Input" value="This field is disabled" disabled></xds-input>
+  </section>
+
+  <!-- Textarea -->
+  <section class="component-section">
+    <h3>Textarea</h3>
+    <xds-textarea label="Comments" placeholder="Enter your comments here..." rows="6"></xds-textarea>
+    <xds-textarea label="Required Field" placeholder="This is required" rows="4" required></xds-textarea>
+  </section>
+
+  <!-- Checkboxes -->
+  <section class="component-section">
+    <h3>Checkboxes</h3>
+    <div class="checkbox-group">
+      <xds-checkbox label="I agree to the terms and conditions" checked></xds-checkbox>
+      <xds-checkbox label="Subscribe to newsletter"></xds-checkbox>
+      <xds-checkbox label="Receive notifications"></xds-checkbox>
+      <xds-checkbox label="Disabled option" disabled></xds-checkbox>
+    </div>
+  </section>
+
+  <!-- Radio Buttons -->
+  <section class="component-section">
+    <h3>Radio Buttons</h3>
+    <xds-radio-group label="Select your preferred contact method">
+      <xds-radio name="contact" value="email" label="Email" checked></xds-radio>
+      <xds-radio name="contact" value="phone" label="Phone"></xds-radio>
+      <xds-radio name="contact" value="sms" label="SMS"></xds-radio>
+    </xds-radio-group>
+  </section>
+
+  <!-- Select Dropdown -->
+  <section class="component-section">
+    <h3>Select Dropdown</h3>
+    <xds-select label="Country">
+      <option value="">Select a country</option>
+      <option value="us">United States</option>
+      <option value="uk">United Kingdom</option>
+      <option value="ca">Canada</option>
+      <option value="au">Australia</option>
+      <option value="de">Germany</option>
+    </xds-select>
+    <xds-select label="Department" required>
+      <option value="">Select department</option>
+      <option value="eng">Engineering</option>
+      <option value="design">Design</option>
+      <option value="sales">Sales</option>
+      <option value="hr">Human Resources</option>
+    </xds-select>
+  </section>
+
+  <!-- Form Example -->
+  <section class="component-section">
+    <h3>Complete Form Example</h3>
+    <form class="sample-form">
+      <xds-input label="Username" placeholder="Choose a username" required></xds-input>
+      <xds-input label="Password" type="password" placeholder="Enter password" required></xds-input>
+      <xds-input label="Confirm Password" type="password" placeholder="Confirm password" required></xds-input>
+      <xds-select label="Role">
+        <option value="">Select role</option>
+        <option value="admin">Administrator</option>
+        <option value="user">User</option>
+        <option value="guest">Guest</option>
+      </xds-select>
+      <xds-checkbox label="I accept the privacy policy"></xds-checkbox>
+      <div class="form-actions">
+        <xds-button variant="primary">Submit</xds-button>
+        <xds-button variant="secondary">Cancel</xds-button>
+      </div>
+    </form>
+  </section>
+</div>
+</app-sidebar>
