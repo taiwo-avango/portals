@@ -1,73 +1,151 @@
-# React + TypeScript + Vite
+# XDS Component Showcase - Vite + React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive showcase of Munich Re XDS Design System components built with React 19 and Vite 7.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Comprehensive Component Library**: Buttons, cards, alerts, forms, tables, badges, progress bars, tabs, and more
+- **React Router**: Client-side routing with 5 showcase pages
+- **TypeScript**: Full type safety with custom XDS component declarations
+- **Responsive Design**: Mobile-friendly layouts with CSS Grid and Flexbox
+- **Modern Stack**: React 19, Vite 7.2, TypeScript 5.9
 
-## React Compiler
+## Pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Home** (`/`) - Comprehensive overview of all XDS components
+2. **Forms** (`/forms`) - Form components showcase (inputs, selects, checkboxes, radio buttons)
+3. **Data** (`/data`) - Data display components (tables, cards, progress tracking)
+4. **Layouts** (`/layouts`) - Layout components (cards, grids, tabs)
+5. **Notifications** (`/notifications`) - Alerts, badges, and notification components
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js 20.19+ or 22.12+ (recommended)
+- npm or yarn
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Start the development server:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+The app will be available at `http://localhost:5173`
+
+### Build
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Build output will be in the `dist/` folder.
+
+### Preview
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+├── components/          # Shared components
+│   ├── Header.tsx      # Top navigation
+│   ├── Footer.tsx      # Footer with version info
+│   └── Sidebar.tsx     # Navigation sidebar
+├── pages/              # Page components
+│   ├── HomePage.tsx    # Main showcase
+│   ├── FormsPage.tsx   # Forms showcase
+│   ├── DataPage.tsx    # Data components
+│   ├── LayoutsPage.tsx # Layout examples
+│   └── NotificationsPage.tsx # Alerts & notifications
+├── config/             # Configuration
+│   └── environment.ts  # App settings
+├── App.tsx             # Main app with routing
+└── global.d.ts         # TypeScript declarations for XDS
+```
+
+## Technologies
+
+- **React**: 19.2.0
+- **Vite**: 7.2.2
+- **TypeScript**: 5.9.3
+- **React Router DOM**: 7.1.1
+- **@xds/components**: 1.94.1 (Munich Re Design System)
+
+## XDS Components Used
+
+### Interactive Components
+- `xds-button` - Primary, secondary, tertiary variants
+- `xds-input` - Text inputs with various types
+- `xds-textarea` - Multi-line text input
+- `xds-checkbox` - Checkbox controls
+- `xds-radio` - Radio button controls
+- `xds-select` - Dropdown selects
+
+### Display Components
+- `xds-card` - Content cards with headers
+- `xds-alert` - Alert messages (info, success, warning, error)
+- `xds-badge` - Status badges
+- `xds-table` - Data tables
+- `xds-progress-bar` - Progress indicators
+- `xds-icon` - Icon components
+
+### Layout Components
+- `xds-header` - Application header
+- `xds-sidebar` - Side navigation
+- `xds-tabs` - Tabbed content
+
+## Development Notes
+
+### TypeScript Support
+
+Custom XDS component types are declared in `src/global.d.ts` to enable TypeScript support for web components.
+
+### Styling
+
+- Component-specific styles in individual `.css` files
+- Shared styles in `pages/shared.css`
+- Responsive design with mobile-first approach
+
+### Routing
+
+React Router DOM is configured in `App.tsx` with the following routes:
+- `/` - Home page
+- `/forms` - Forms showcase
+- `/data` - Data components
+- `/layouts` - Layout examples
+- `/notifications` - Alerts and notifications
+
+## Build Information
+
+Production build output:
+- HTML: ~0.46 kB (gzipped: 0.30 kB)
+- CSS: ~5.68 kB (gzipped: 1.63 kB)
+- JavaScript: ~233.49 kB (gzipped: 71.05 kB)
+
+Build time: ~400ms
+
+## License
+
+This project is part of the GSI Portals Reference implementation.
+
+## See Also
+
+- [Angular version](../angular-swa/README.md) - Angular implementation of the same showcase
+- [Next.js version](../next-swa/README.md) - Next.js implementation
+- [Implementation Summary](./IMPLEMENTATION_SUMMARY.md) - Detailed implementation notes
