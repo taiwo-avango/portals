@@ -1,0 +1,38 @@
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+.form-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.badge-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+xds-progress-bar {
+  margin-bottom: 1rem;
+}
+
+xds-alert {
+  margin-bottom: 1rem;
+}

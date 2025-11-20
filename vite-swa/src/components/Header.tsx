@@ -1,0 +1,22 @@
+import React from 'react';
+
+const Header: React.FC = () => {
+  return (
+    <header>
+      <xds-header 
+        platform-name="GSI Portal" 
+        application-name="Reference App" 
+        application-short-name="" 
+        emphasized-text=""
+        subtitle="You are using MIRA go in Demo mode. Please do not enter personal data."
+        dashboard-link="https://www.munichre.com/en.html" 
+        link-target="_self" 
+        initials="IC" 
+        role=""
+        profile-tooltip="">
+      </xds-header>
+    </header>
+  );
+};
+
+export default Header;
